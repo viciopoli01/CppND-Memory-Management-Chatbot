@@ -11,7 +11,7 @@ GraphNode::~GraphNode()
     //// STUDENT CODE
     ////
 
-    delete _chatBot; 
+    // delete _chatBot; 
 
     ////
     //// EOF STUDENT CODE
@@ -34,9 +34,9 @@ void GraphNode::AddEdgeToChildNode(GraphEdge *edge)
 
 //// STUDENT CODE
 ////
-void GraphNode::MoveChatbotHere(ChatBot *chatbot)
+void GraphNode::MoveChatbotHere(std::shared_ptr<ChatBot> chatbot)
 {
-    _chatBot = chatbot;
+    _chatBot=chatbot;
     _chatBot->SetCurrentNode(this);
 }
 
