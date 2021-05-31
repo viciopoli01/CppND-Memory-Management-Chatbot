@@ -48,8 +48,8 @@ ChatBot::ChatBot(const ChatBot &source)  // copy constructor
   _image = new wxBitmap(*(source._image));  // avatar image
 
   // data handles (not owned)
-  *_currentNode = *source._currentNode;
-  *_rootNode = *source._rootNode;
+  _currentNode = source._currentNode;
+  _rootNode = source._rootNode;
   _chatLogic = source._chatLogic;
 }
 
@@ -64,8 +64,8 @@ ChatBot &ChatBot::operator=(
   _image = new wxBitmap(*(source._image));  // avatar image
 
   // data handles (not owned)
-  *_currentNode = *source._currentNode;
-  *_rootNode = *source._rootNode;
+  _currentNode = source._currentNode;
+  _rootNode = source._rootNode;
   _chatLogic = source._chatLogic;
 
   return *this;
