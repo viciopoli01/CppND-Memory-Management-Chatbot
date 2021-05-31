@@ -50,7 +50,7 @@ ChatBot::ChatBot(const ChatBot &source)  // copy constructor
   // data handles (not owned)
   *_currentNode = *source._currentNode;
   *_rootNode = *source._rootNode;
-  *_chatLogic = *source._chatLogic;
+  _chatLogic = source._chatLogic;
 }
 
 ChatBot &ChatBot::operator=(
@@ -66,7 +66,7 @@ ChatBot &ChatBot::operator=(
   // data handles (not owned)
   *_currentNode = *source._currentNode;
   *_rootNode = *source._rootNode;
-  *_chatLogic = *source._chatLogic;
+  _chatLogic = source._chatLogic;
 
   return *this;
 }
